@@ -1,0 +1,15 @@
+<div *ngIf="hero">
+    <p>
+        snakefield works! <span>{{hero.name}}</span> 
+      </p>
+      <div>
+        <label>name:
+            <input [(ngModel)]="hero.name" placeholder="name" />
+        </label>
+      </div>
+      <div>
+        id: {{hero.id}}
+      </div>
+</div>
+<button (click)="goBack()">go back</button>
+<button (click)="save()">Save</button>

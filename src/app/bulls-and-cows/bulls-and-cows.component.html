@@ -1,0 +1,16 @@
+<h3>Bulls and Cows game</h3>
+
+<div>
+  <label>Input:</label>
+  <input #userInput max="9999" type="number" />
+  <button (click)="guess(userInput.value)">Guess!</button>
+  <button (click)="startNewGame(); userInput.value=''">Reset game</button>
+</div>
+
+<div *ngIf="gameLog.length > 0">
+    <br />
+    <label>Log:</label>
+    <ul>
+      <li *ngFor="let item of gameLog">{{item}}</li>
+    </ul>
+</div>
